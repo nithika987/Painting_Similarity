@@ -76,12 +76,10 @@ LPIPS (Learned Perceptual Image Patch Similarity): Uses deep networks to model h
 Cosine Similarity on Embeddings: Compares feature representations of paintings, ensuring semantic and stylistic similarity detection across different artistic styles.
 # Result Analysis
 
-                      Average SSIM Score  Average RMSE Score  Average LPIPS Score
-Compressor                                                                 
-
-hybrid_face               0.285237            0.272339             0.597490
-
-hybrid_general            0.285965            0.271676             0.598274
+| **Compressor**      | **Average SSIM Score** | **Average RMSE Score** | **Average LPIPS Score** |
+|---------------------|----------------------|----------------------|----------------------|
+| **hybrid_face**     | 0.285237             | 0.272339             | 0.597490             |
+| **hybrid_general**  | 0.285965             | 0.271676             | 0.598274             |
 
 Average Cosine Similarity: 0.8161
 
