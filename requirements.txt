@@ -1,0 +1,23 @@
+faiss-gpu
+ultralytics
+insightface
+transformers
+timm
+facenet-pytorch
+torch==2.0.0+cu117
+torchvision==0.15.0+cu117
+torchmetrics==0.10.3
+git+https://github.com/facebookresearch/dinov2.git
+onnxruntime-gpu
+pillow
+lpips
+numpy
+pandas
+tqdm
+faiss-cpu  # or faiss-gpu if needed
+matplotlib
+transformers
+insightface
+opencv-python
+joblib
+urllib3
