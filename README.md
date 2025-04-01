@@ -7,15 +7,21 @@ This project implements a hybrid painting similarity system using ArcFace, DINOv
 Dataset: https://www.google.com/url?q=https://github.com/NationalGalleryOfArt/opendata&sa=D&source=editors&ust=1743430855089832&usg=AOvVaw2YqeNkDKXA4Gfs70IqK9F0
 
 1️⃣ Optimized Image Loading – The OptimizedImageDataset class ensures efficient image loading, with optional augmentations (flips, rotations, color jittering) for robustness.
+
 2️⃣ Error Handling & Data Integrity – Handles missing or corrupt images gracefully by returning a zero tensor, preventing training crashes.
+
 3️⃣ Automated Image Downloading – The ImageDownloader class fetches painting images from the National Gallery of Art Open Data, with CSV validation and metadata filtering.
+
 4️⃣ Parallelized Image Processing – Uses multi-threaded parallel downloads (16 jobs at once) for fast and scalable image retrieval.
+
 5️⃣ FAISS-Compatible Image Storage – Ensures images are stored in a structured format, enabling efficient similarity searches using FAISS indexing.
 **Model**
 https://github.com/nithika987/Painting_Similarity/blob/main/models/hybrid_face_similarity.py
 Triple-Powered Embeddings:
 ✔ ArcFace (Identity-Based) – Extracts high-precision facial embeddings, ensuring identity-level similarity for face verification.
+
 ✔ DINOv2 (High-Level Semantics) – Captures deep, abstract patterns, making it perfect for matching paintings and artistic styles beyond just pixel similarity.
+
 ✔ CLIP (Contextual Understanding) – Bridges visual and textual similarity, enabling text-based image retrieval (e.g., "Find a portrait that looks like Van Gogh's style").
 
 Painting & Face Similarity:
@@ -24,7 +30,9 @@ Painting & Face Similarity:
 
 🔹 Superior Image Preprocessing for Maximum Accuracy in Paintings:
      Color & Contrast Enhancement – Uses Adaptive Histogram Equalization (CLAHE) for fine-tuned brightness and contrast correction, ensuring clearer features in paintings & low-light photos.
+     
      Smart Sharpening – Applies Unsharp Masking and High-Pass Filters to refine edges & textures, making face detection and painting details stand out.
+     
      Noise Reduction & Denoising – Removes unwanted grain while preserving fine textures, improving painting comparisons and low-light face matching.
 
 🔹 Robust Face Detection & Extraction:
