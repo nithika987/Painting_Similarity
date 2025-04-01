@@ -3,7 +3,7 @@
 # Abstarct
 This project implements a hybrid painting similarity system using ArcFace, DINOv2, and CLIP embeddings for feature extraction. It leverages FAISS indexing for fast retrieval of visually and stylistically similar artworks. The system can be used to enhance art analysis, recommendation, and historical research by efficiently matching paintings based on learned representations.
 # Approach
-**Dataset**
+# Dataset
 Dataset: https://www.google.com/url?q=https://github.com/NationalGalleryOfArt/opendata&sa=D&source=editors&ust=1743430855089832&usg=AOvVaw2YqeNkDKXA4Gfs70IqK9F0
 
 1️⃣ Optimized Image Loading – The OptimizedImageDataset class ensures efficient image loading, with optional augmentations (flips, rotations, color jittering) for robustness.
@@ -16,7 +16,7 @@ Dataset: https://www.google.com/url?q=https://github.com/NationalGalleryOfArt/op
 
 5️⃣ FAISS-Compatible Image Storage – Ensures images are stored in a structured format, enabling efficient similarity searches using FAISS indexing.
 
-**Model**
+# Model
 https://github.com/nithika987/Painting_Similarity/blob/main/models/hybrid_face_similarity.py
 
 Triple-Powered Embeddings:
@@ -27,11 +27,13 @@ Triple-Powered Embeddings:
 
 ✔ CLIP (Contextual Understanding) – Bridges visual and textual similarity, enabling text-based image retrieval (e.g., "Find a portrait that looks like Van Gogh's style").
 
-Painting & Face Similarity:
-    Painting Matching – Unlike traditional feature extractors, DINOv2 understands texture, brushstrokes, and artistic styles, making it perfect for finding visually similar paintings.
-    Face Similarity – ArcFace ensures accurate identity-level matching, while DINOv2 helps find lookalikes even with different lighting, angles, or artistic distortions.
+**Painting & Face Similarity:**
 
-🔹 Superior Image Preprocessing for Maximum Accuracy in Paintings:
+Painting Matching – Unlike traditional feature extractors, DINOv2 understands texture, brushstrokes, and artistic styles, making it perfect for finding visually similar paintings.
+
+Face Similarity – ArcFace ensures accurate identity-level matching, while DINOv2 helps find lookalikes even with different lighting, angles, or artistic distortions.
+
+🔹 **Superior Image Preprocessing for Maximum Accuracy in Paintings:**
 
      Color & Contrast Enhancement – Uses Adaptive Histogram Equalization (CLAHE) for fine-tuned brightness and contrast correction, ensuring clearer features in paintings & low-light photos.
      
@@ -39,13 +41,13 @@ Painting & Face Similarity:
      
      Noise Reduction & Denoising – Removes unwanted grain while preserving fine textures, improving painting comparisons and low-light face matching.
 
-🔹 Robust Face Detection & Extraction:
+🔹 **Robust Face Detection & Extraction:**
 
  Multi-Retry Face Detection 
  
  Dynamic Bounding Box Optimization 
  
-🔹 Optimized for Speed & Efficiency:
+🔹 **Optimized for Speed & Efficiency:**
 
  Memory-Efficient Execution 
  
@@ -67,13 +69,13 @@ Painting & Face Similarity:
 
 # Evaluation Metrics
 
-SSIM (Structural Similarity Index Measure): Evaluates perceptual similarity by considering luminance, contrast, and structure, making it ideal for assessing artistic details and textures in paintings.
+*SSIM* (Structural Similarity Index Measure): Evaluates perceptual similarity by considering luminance, contrast, and structure, making it ideal for assessing artistic details and textures in paintings.
 
-RMSE (Root Mean Squared Error): Measures pixel-wise differences between images, helping quantify overall visual deviation in paintings.
+*RMSE* (Root Mean Squared Error): Measures pixel-wise differences between images, helping quantify overall visual deviation in paintings.
 
-LPIPS (Learned Perceptual Image Patch Similarity): Uses deep networks to model human visual perception, capturing complex artistic style variations beyond pixel-level comparisons.
+*LPIPS* (Learned Perceptual Image Patch Similarity): Uses deep networks to model human visual perception, capturing complex artistic style variations beyond pixel-level comparisons.
 
-Cosine Similarity on Embeddings: Compares feature representations of paintings, ensuring semantic and stylistic similarity detection across different artistic styles.
+*Cosine Similarity on Embeddings*: Compares feature representations of paintings, ensuring semantic and stylistic similarity detection across different artistic styles.
 # Result Analysis
 
 | **Compressor**      | **Average SSIM Score** | **Average RMSE Score** | **Average LPIPS Score** |
@@ -85,13 +87,13 @@ Average Cosine Similarity: 0.8161
 
 The results indicate that the hybrid compression methods achieved an average cosine similarity of 0.8161, suggesting strong feature preservation. However, SSIM (~0.285), RMSE (~0.272), and LPIPS (~0.598) scores reveal moderate perceptual quality, indicating some loss in fine details.
 
-Positives:
+*Positives:*
 
 Consistent performance across hybrid methods.
 
 Faces detected in many ainintgs, even miniscule faces.
 
-Shortcomings:
+*Shortcomings:*
 
 Low SSIM suggests structural distortions.
 
