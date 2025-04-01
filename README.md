@@ -1,6 +1,7 @@
 # Painting_Similarity
 # GSoc ArtExtract Task 2: Similarity
 # Abstarct
+This project implements a hybrid painting similarity system using ArcFace, DINOv2, and CLIP embeddings for feature extraction. It leverages FAISS indexing for fast retrieval of visually and stylistically similar artworks. The system can be used to enhance art analysis, recommendation, and historical research by efficiently matching paintings based on learned representations.
 # Approach
 **Dataset**
 Dataset: https://www.google.com/url?q=https://github.com/NationalGalleryOfArt/opendata&sa=D&source=editors&ust=1743430855089832&usg=AOvVaw2YqeNkDKXA4Gfs70IqK9F0
